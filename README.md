@@ -18,10 +18,6 @@ run server.py <br>
 
 web page aviable on port 5000
 <BR>
-    - Status  (QPIGS) as JSON:
-    ```
-    http://machine_ip:5000/cgi/sila.py?com=QPIGS
-  
     ```
 
     - Operation Mode (QMOD) as JSON:
@@ -29,6 +25,12 @@ web page aviable on port 5000
     ```
     http://machine_ip:5000/cgi/sila.py?com=QMOD
     
+    
+    - Status  (QPIGS) as JSON:
+    ```
+    http://machine_ip:5000/cgi/sila.py?com=QPIGS
+  
+  
     ```
 
 
