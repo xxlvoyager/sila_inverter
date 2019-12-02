@@ -14,8 +14,7 @@ Connect Inverter to USB port Raspberry
 <br>
 make *.py files in folder cgi  executable 
 run python3 server.py
-<br>
-Now web server aviable on port 5000
+ Now web server aviable on port 5000
 <br>
  ### USING
  
