@@ -23,7 +23,18 @@ sila=Invertor()
 def request(command):
     sila.send(Command(command))
     respond=sila.get()
-    return  parse_resp(command,respond)
+
+    reply=parse_resp(command,respond)
+    #Check error
+    if json.loads(reply)["error"]:
+        # If error try one more
+        #print('one more')
+
+        sila.send(Command(command))
+        respond=sila.get()
+        return  parse_resp(command,respond)
+    else:
+        return reply
 
 
 #Respond to browser
@@ -31,4 +42,3 @@ def request(command):
 print ("Content-type: application/json")
 print () 
 print(request(command))
-
