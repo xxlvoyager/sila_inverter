@@ -22,16 +22,16 @@ web page aviable on port 5000
 
     - Operation Mode (QMOD) as JSON:
     
-    ```
+    
     http://machine_ip:5000/cgi/sila.py?com=QMOD
     
-    ```
+    
     
     - Status  (QPIGS) as JSON:
-    ```
+    
     http://machine_ip:5000/cgi/sila.py?com=QPIGS
   
-    ```
+ 
 
 
 
