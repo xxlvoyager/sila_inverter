@@ -1,6 +1,5 @@
 # sila_inverter
-WEB monitor Solar Inverter SILA based on Raspberry Pi
-Reply in JSON format.
+WEB monitor Solar Inverter SILA based on Raspberry Pi respond in JSON format.
 <br>
 Supported command 'QPIGS','QDI','QMOD','QPIRI'
 <br>
