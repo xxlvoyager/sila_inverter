@@ -13,8 +13,8 @@ reload udev command
 ```sudo udevadm trigger```
 
 Connect Inverter to USB port Raspberry<br>
-make py files, include folder cgi  executable 
-run server.py <br>
+make *.py files folder cgi  executable 
+run python3 server.py
 
 web page aviable on port 5000
 <BR>
