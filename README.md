@@ -8,14 +8,15 @@ Supported command 'QPIGS','QDI','QMOD','QPIRI'
 Create ```/etc/udev/rules.d/15-sila.rules```
 add line to file<br>
  ```KERNEL=="hidraw*", SUBSYSTEM=="hidraw", MODE="0666", GROUP="plugdev"```
-  reload udev via command ```sudo udevadm trigger```
+<br>reload udev via command ```sudo udevadm trigger```
 
 Connect Inverter to USB port Raspberry
 <br>
 make *.py files in folder cgi  executable 
 run python3 server.py
+<br>
 Now web server aviable on port 5000
-<BR>
+<br>
  ### USING
  
 
