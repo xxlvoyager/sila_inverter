@@ -19,7 +19,7 @@ Run ```python3 sila_inverter/server.py```
  ### USING
  
 
-    - List avable command:
+    - List aviable command:
     
     http://machine_ip:5000/
     
