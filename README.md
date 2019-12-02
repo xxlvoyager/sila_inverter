@@ -18,7 +18,8 @@ run server.py <br>
 
 web page aviable on port 5000
 <BR>
-
+ ### USE
+ 
 
     - Operation Mode (QMOD) as JSON:
     
