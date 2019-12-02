@@ -8,7 +8,7 @@ Supported command 'QPIGS','QDI','QMOD','QPIRI'
 Create ```/etc/udev/rules.d/15-sila.rules```
 add line to file<br>
  ```KERNEL=="hidraw*", SUBSYSTEM=="hidraw", MODE="0666", GROUP="plugdev"```
- reload udev via command ```sudo udevadm trigger```
+  reload udev via command ```sudo udevadm trigger```
 
 Connect Inverter to USB port Raspberry
 <br>
