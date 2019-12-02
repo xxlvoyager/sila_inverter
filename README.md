@@ -2,7 +2,7 @@
 WEB monitor Solar Inverter SILA based on Raspberry Pi
 Reply in JSON format.
 Supported command 'QPIGS','QDI','QMOD','QPIRI'
-#SETUP
+SETUP
 Create /etc/udev/rules.d/15-sila.rules
 add line 
 KERNEL=="hidraw*", SUBSYSTEM=="hidraw", MODE="0666", GROUP="plugdev"
