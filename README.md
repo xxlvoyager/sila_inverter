@@ -1,4 +1,4 @@
 # sila_inverter
-JSON interface for Solar Inverter SILA.
-
+WEB monitor Solar Inverter SILA.
+Reply in JSON format.
 Supported command 'QPIGS','QDI','QMOD','QPIRI'
