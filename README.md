@@ -12,9 +12,9 @@ add line to file<br>
 
 Connect Inverter to USB port Raspberry
 <br>
-make *.py files in folder cgi  executable 
-run python3 server.py
- Now web server aviable on port 5000
+Make *.py files in folder ```sila_inverter/cgi```  executable. 
+Run ```python3 sila_inverter/server.py```
+ Now web server aviable on port 5000.
 <br>
  ### USING
  
