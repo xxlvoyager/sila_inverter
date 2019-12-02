@@ -7,13 +7,15 @@ Supported command 'QPIGS','QDI','QMOD','QPIRI'
 <b>SETUP</b>
 <br>
 Create <i>/etc/udev/rules.d/15-sila.rules</i>
-add line 
+add line to file<br>
 KERNEL=="hidraw*", SUBSYSTEM=="hidraw", MODE="0666", GROUP="plugdev"
+<br>
 reload udev command
 <i>sudo udevadm trigger</i>
 
-Connect Inverter to USB port Raspberry
-run server.py
+Connect Inverter to USB port Raspberry<br>
+run server.py <br>
+
 web page aviable on port 5000
 
 
