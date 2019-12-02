@@ -21,11 +21,14 @@ web page aviable on port 5000
  ### USE
  
 
+    - List avable command:
+    
+    http://machine_ip:5000/
+    
+    
     - Operation Mode (QMOD) as JSON:
     
-    
     http://machine_ip:5000/cgi/sila.py?com=QMOD
-    
     
     
     - Status  (QPIGS) as JSON:
