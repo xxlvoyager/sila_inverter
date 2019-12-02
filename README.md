@@ -2,6 +2,7 @@
 WEB monitor Solar Inverter SILA based on Raspberry Pi
 Reply in JSON format.
 Supported command 'QPIGS','QDI','QMOD','QPIRI'
+<br>
 SETUP
 Create /etc/udev/rules.d/15-sila.rules
 add line 
