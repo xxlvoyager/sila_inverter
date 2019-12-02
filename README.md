@@ -8,9 +8,10 @@ Supported command 'QPIGS','QDI','QMOD','QPIRI'
 Create */etc/udev/rules.d/15-sila.rules*
 add line in file <br>
  ```KERNEL=="hidraw*", SUBSYSTEM=="hidraw", MODE="0666", GROUP="plugdev"```
-<br> reload udev via command ```
-sudo udevadm control --reload-rules
-sudo udevadm trigger```
+<br> reload udev via command<br>
+```sudo udevadm control --reload-rules```
+<br>
+```sudo udevadm trigger```
 Connect Inverter to USB port Raspberry
 <br>
 Make py files in folder ```sila_inverter/cgi```  executable. 
