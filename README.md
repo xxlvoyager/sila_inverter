@@ -12,6 +12,7 @@ add line in file <br>
 ```sudo udevadm control --reload-rules```
 <br>
 ```sudo udevadm trigger```
+<br>
 Connect Inverter to USB port Raspberry
 <br>
 Make py files in folder ```sila_inverter/cgi```  executable. 
