@@ -9,16 +9,16 @@ Create ```/etc/udev/rules.d/15-sila.rules```
 add line to file<br>
 ```KERNEL=="hidraw*", SUBSYSTEM=="hidraw", MODE="0666", GROUP="plugdev"```
 <br>
-reload udev command
+reload udev via command
 ```sudo udevadm trigger```
 
-Connect Inverter to USB port Raspberry<br>
-make *.py files folder cgi  executable 
+Connect Inverter to USB port Raspberry
+<br>
+make *.py files in folder cgi  executable 
 run python3 server.py
-
-web page aviable on port 5000
+Now web server aviable on port 5000
 <BR>
- ### USE
+ ### USING
  
 
     - List avable command:
