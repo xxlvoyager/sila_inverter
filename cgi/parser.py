@@ -2,20 +2,21 @@ import json
 import crc16
 from collections import OrderedDict
 
-def Command(cmd):
-    cmd = cmd.encode('utf-8')
-    crc = crc16.crc16xmodem(cmd).to_bytes(2,'big')
-    cmd = cmd+crc
-    cmd = cmd+b'\r'
-    while len(cmd)<8:
-        cmd = cmd+b'\0'
-    return cmd
+batteryTypes = {'0': 'AGM', '1': 'FLA', '2': 'User Defined'}
+voltageRanges = {'0': 'Appliance', '1': 'UPS'}
+outputSources = {'0': 'Utility first', '1': 'Solar first', '2': 'SBU'}
+chargerSources = {'0': 'Utility first', '1': 'Solar first','2': 'Solar + Utility', '3': 'Solar only'}
+deviceTypes = {'00': 'Grid tie', '01': 'Off grid', '10': 'Hybrid','11': 'Off Grid, 2 trackers', '20': 'Off grid, 3 trackers'},
+topologies = {'0': 'transformerless', '1': 'transformer'}
+outputModes = {'0': 'Single', '1': 'Parallel', '2': 'Phase 1','3': 'Phase 2', '4': 'Phase 3'}
+pvStatuses = {'0': 'On one OK', '1': 'On all OK'}
+balances = {'0': 'PV max current', '1': 'PV max power'}
 
 def QPIGS(a):
     #len 112
     data={}
     data['command']='QPIGS'
-    if len(a)==112:
+    if len(a)>=110:
         nums = a[1:].split()
         data["Grid_voltage"]=nums[0]
         data["Grid_frequency"]=nums[1]
@@ -43,7 +44,7 @@ def QPIRI(a):
     #len 104
     data={}
     data['command']='QPIRI'
-    if len(a)==104:
+    if len(a)>=97:
         r = a[1:].split()
         data['error']=False
         data['Utility_voltage']=r[0]
@@ -80,7 +81,7 @@ def QPIRI(a):
 def QMOD(a):
     data={}
     data['command']='QMOD'
-    if len (a)==8:
+    if len (a)>=5:
 
         data['error']=False
         a=a[1:2]
@@ -109,7 +110,7 @@ def QDI(a):
     
     
     data['command']='QDI'
-    if len(a)==80:
+    if len(a)>=79:
         r = a[1:].split()
         data['error']=False
         data['Output_voltage']=r[0]

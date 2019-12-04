@@ -1,9 +1,15 @@
 #!/usr/bin/env python3
+import configparser
+config = configparser.ConfigParser()
+config.read('invertor.ini')
 import sys
 import cgi
 import time
 from parser import *
-from invertor import Invertor
+if 'tty' in config['DEFAULT']['port']:
+    from invertor_rs import Invertor
+else :
+    from invertor_hr import Invertor
 
 form = cgi.FieldStorage()
 # Try find command in browser request  if not have then 'QPIGS'
@@ -20,25 +26,15 @@ except:
 # Initialize  USB port
 sila=Invertor()
 
-def request(command):
-    sila.send(Command(command))
-    respond=sila.get()
-
+respond=sila.write(command)
+if 'Error' in respond:
+    print ("Content-type: text/html")
+    print ()
+    print ('<!DOCTYPE html>')
+    print ('<h1>',respond,'</h1>')
+else:
     reply=parse_resp(command,respond)
-    #Check error
-    if json.loads(reply)["error"]:
-        # If error try one more
-        #print('one more')
+    print ("Content-type: application/json")
+    print () 
+    print(reply)
 
-        sila.send(Command(command))
-        respond=sila.get()
-        return  parse_resp(command,respond)
-    else:
-        return reply
-
-
-#Respond to browser
-
-print ("Content-type: application/json")
-print () 
-print(request(command))
