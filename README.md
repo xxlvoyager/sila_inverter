@@ -20,7 +20,7 @@ add line in file <br>
 <br>
 Make py files in folder ```sila_inverter/cgi```  executable. 
 <br> Run ```python3 sila_inverter/server.py```
- Now web server aviable on port 5000. ( can change in *ivertor.ini*)
+ Now web server aviable on port 5000.
 <br>
  ### USING
  
