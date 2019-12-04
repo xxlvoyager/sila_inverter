@@ -7,7 +7,8 @@ Supported command 'QPIGS','QDI','QMOD','QPIRI'
 Connect Inverter to USB port Raspberry directly (/dev/hidraw0)
 or via tty converter (/dev/ttyUSB0)
 <br>
-Select type of port in *invertor.ini* 
+Select type of port in *invertor.ini* <br>
+
 For ```/dev/hidraw0``` Create */etc/udev/rules.d/15-sila.rules*
 add line in file <br>
  ```KERNEL=="hidraw*", SUBSYSTEM=="hidraw", MODE="0666", GROUP="plugdev"```
