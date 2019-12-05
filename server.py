@@ -2,9 +2,9 @@
 import configparser
 config = configparser.ConfigParser()
 config.read('invertor.ini')
-port=config['DEFAULT']['server_port']
+port=int(config['DEFAULT']['server_port'])
 from http.server import HTTPServer,CGIHTTPRequestHandler
-server_address = ("", 5000)
+server_address = ("", port)
 CGIHTTPRequestHandler.cgi_directories = ["/cgi"]
 
 httpd = HTTPServer(server_address, CGIHTTPRequestHandler)
