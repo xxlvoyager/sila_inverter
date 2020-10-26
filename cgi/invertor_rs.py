@@ -1,15 +1,17 @@
 #!/usr/bin/env python3
 import configparser
-config = configparser.ConfigParser()
-config.read('invertor.ini')
-port= config['DEFAULT']['port']
-
 import serial
 import time
 import re
 import crc16
 import json
 from collections import OrderedDict
+
+config = configparser.ConfigParser()
+config.read('invertor.ini')
+port= config['DEFAULT']['port']
+
+
 
 len_res={'QPIGS':110,'QPIRI':97, 'QMOD':5, 'QDI':79}
 
