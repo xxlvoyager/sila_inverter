@@ -3,39 +3,47 @@ WEB monitor Solar Inverter SILA based on Raspberry Pi respond in JSON format.
 
 Supported command 'QPIGS','QDI','QMOD','QPIRI'
 
- ### SETUP
+ ## SETUP
 Connect Inverter to USB port Raspberry directly (/dev/hidraw0)
 or via tty converter (/dev/ttyUSB0)
-<br>
+
 Select type of port in *invertor.ini* <br>
 
-For ```/dev/hidraw0``` Create */etc/udev/rules.d/15-sila.rules*
-add line in file <br>
- ```KERNEL=="hidraw*", SUBSYSTEM=="hidraw", MODE="0666", GROUP="plugdev"```
-<br> reload udev via command<br>
-```sudo udevadm control --reload-rules```
-<br>
-```sudo udevadm trigger```
-<br>
-<br>
-Make py files in folder ```sila_inverter/cgi```  executable. 
-<br> Run ```python3 sila_inverter/server.py```
- Now web server aviable on port 5000.
-<br>
- ### USING
+For `/dev/hidraw0` Create */etc/udev/rules.d/15-sila.rules*
+
+add line in file 
+
+ `KERNEL=="hidraw*", SUBSYSTEM=="hidraw", MODE="0666", GROUP="plugdev"`
+
+reload udev via command
+
+`sudo udevadm control --reload-rules`
+
+
+`sudo udevadm trigger`
+
+
+Make py files in folder `sila_inverter/cgi`  executable. 
+
+Run `python3 sila_inverter/server.py`
+
+> Now web server aviable on port 5000.
+
+
+ ## USING
  
 
-    - List aviable command:
+###    - List available command:
     
     http://machine_ip:5000/
     
     
-    - Operation Mode (QMOD) as JSON:
+###    - Operation Mode (QMOD) as JSON:
     
     http://machine_ip:5000/cgi/sila.py?com=QMOD
     
     
-    - Status  (QPIGS) as JSON:
+###    - Status  (QPIGS) as JSON:
     
     http://machine_ip:5000/cgi/sila.py?com=QPIGS
   

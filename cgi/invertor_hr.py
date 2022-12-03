@@ -43,7 +43,7 @@ class Invertor(object):
         i=0
         while '\r' not in res and i<20:
             try:
-                res+="".join([chr(i) for i in self.dev.read(0x81,8, timeout) ])
+                res += "".join([chr(i) for i in self.dev.read(0x81,8, timeout) ])
             except usb.core.USBError as e:
                 if e.errno == 110:
                     log.debug(e)
