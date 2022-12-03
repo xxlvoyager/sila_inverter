@@ -1,7 +1,10 @@
 # sila_inverter
+<img src='https://img.shields.io/badge/WEB MONITOR-SILA INVERTER-blue?style=for-the-badge&logo=appveyor'>
+
 WEB monitor Solar Inverter SILA based on Raspberry Pi respond in JSON format.
 
 Supported command 'QPIGS','QDI','QMOD','QPIRI'
+
 
  ## SETUP
 Connect Inverter to USB port Raspberry directly (/dev/hidraw0)
